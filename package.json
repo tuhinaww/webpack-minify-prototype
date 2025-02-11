@@ -1,0 +1,20 @@
+{
+  "name": "webpack-minify-prototype",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "terser-webpack-plugin": "^5.3.11",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
