@@ -8,7 +8,7 @@ module.exports = {
   mode: "production",
   entry: "./src/index.js",
   output: {
-    filename: "js/[name].[contenthash].min.js",  // Auto-versioning
+    filename: "js/[name].[contenthash].min.js",
     path: path.resolve(__dirname, "dist"),
   },
   optimization: {
@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({ filename: "css/[name].[contenthash].min.css" }),
+    new MiniCssExtractPlugin({ filename: "css/[name].[contenthash].min.css" }), // ✅ Ensure CSS is extracted
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       minify: { collapseWhitespace: true, removeComments: true },
@@ -27,7 +27,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"], // ✅ Extracts CSS properly
       },
       {
         test: /\.js$/,
